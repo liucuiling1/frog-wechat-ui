@@ -1,0 +1,51 @@
+/* components/frog-ui/empty/empty.wxss */
+
+.empty {
+  width: 100%;
+  height: 100vh;
+  background: #F8F8F8;
+  padding-top: 240rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.empty-top {
+  margin-top: -40rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.empty-text {
+  font-size: 28rpx;
+  font-weight: 400;
+  color: #0E386F;
+  letter-spacing: 2rpx;
+  opacity: 0.4;
+}
+
+.empty-image {
+  width: 330rpx;
+  height: 330rpx;
+  background: 100% 100%;
+}
+
+.empty-button {
+  width: 360rpx;
+  height: 96rpx;
+  background: #5C95F6;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #FFFFFF;
+  letter-spacing: 2rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 98rpx;
+}

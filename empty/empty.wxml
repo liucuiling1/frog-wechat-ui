@@ -1,0 +1,8 @@
+<view class="empty {{empty_class}}">
+  <image class="empty-image" src="{{icon?icon:'../../images/empty.png'}}"></image>
+  <view class="empty-top">
+    <view wx:if="{{text}}" class="empty-text">{{text}}</view>
+    <view wx:if="{{text1}}" class="empty-text">{{text1}}</view>
+  </view>
+  <view wx:if="{{buttonText}}" class="empty-button" bindtap="onClick">{{buttonText}}</view>
+</view>

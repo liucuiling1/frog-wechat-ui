@@ -1,0 +1,20 @@
+<view class="frog-input">
+  <view wx:if="{{ title }}" class="frog-title title-class">{{ title }}</view>
+    <input    
+      value="{{ value }}" 
+      type="{{ type }}" 
+      password="{{password}}" 
+      placeholder="{{ placeholder }}" 
+      placeholder-style="placeholder-style" 
+      placeholder-class="frog-input-placeholder placeholder-class" 
+      disabled="{{ disabled }}"
+      maxlength="{{ maxlength ? maxlength :'-1'}}"
+      auto-focus='{{auto-focus}}'
+      confirm-type='{{confirm-type}}'
+      focus="{{ autofocus }}" 
+      class="frog-input-style input-class"
+      bindinput="handleInputChange" 
+      bindfocus="handleInputFocus"
+      bindblur="handleInputBlur" 
+      bindconfirm='handleInputConfirm'/>
+</view>

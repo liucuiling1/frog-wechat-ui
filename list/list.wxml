@@ -1,0 +1,14 @@
+<!--components/frog-ui/list/list.wxml-->
+<view wx:if="{{type=='text'}}" wx:for="{{list}}" wx:key='index' class="list {{item.list_class}}">
+  <view class="list-name {{item.list_text}}">{{item.text}}</view>
+  <view class="list-value {{item.list_value}}">{{item.value}}</view>
+</view>
+<view wx:if="{{type=='arrowIcon'}}" wx:for="{{list}}" wx:key='index' class="arrowIcon-items {{item.list_class}}">
+  <image wx:if="{{item.src}}" class="arrowIcon-left-icon {{item.list_icon}}" src="{{item.src}}"></image>
+  <view class="arrowIcon-right" data-url="{{item.url}}" bindtap="getUrl">
+    <view class="arrowIcon-right-text {{item.list_text}}">{{item.text}}</view>
+    <image class="arrowIcon-right-icon {{item.list_rightIcon}}"
+      src="{{item.rightIcon?item.rightIcon:'../../images/arrow.png'}}">
+    </image>
+  </view>
+</view>

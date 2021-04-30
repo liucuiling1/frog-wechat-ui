@@ -1,0 +1,48 @@
+<view wx:if="inputList">
+  <view class="frog-box" wx:for="{{inputList}}" wx:key='index'>
+
+    <view wx:if="{{item.type=='name'}}" class="frog-name">{{item.title}}</view>
+
+    <view wx:if="{{item.type=='input'}}" class="frog-input {{item.class}}">
+      <view class="frog-line">
+        <view wx:if="{{ item.title }}" class="frog-title ">{{ item.title }}</view>
+        <input 
+          data-index="{{index}}"
+          value="{{ item.value }}" 
+          type="{{ item.type }}" 
+          password="{{item.password}}" 
+          placeholder="{{ item.placeholder }}" 
+          placeholder-style="{{item.placeholder_style}}" 
+          placeholder-class="frog-input-placeholder {{item.placeholder_class}}" 
+          disabled="{{ item.disabled }}"
+          maxlength="{{ item.maxlength ? item.maxlength :'-1'}}"
+          auto-focus='{{item.auto-focus}}'
+          confirm-type='{{item.confirm-type}}'
+          focus="{{item.autofocus}}" 
+          class="frog-input-style {{item.input_class}}"
+          bindinput="handleInputChange" 
+          bindfocus="handleInputFocus"
+          bindblur="handleInputBlur" 
+          bindconfirm='handleInputConfirm'/>
+      </view>
+    </view>
+
+    <view wx:if="{{item.type=='text'}}" class="frog-type-text {{item.class}}">
+      <view class="frog-line">
+        <view class="frog-title">{{item.title}}</view>
+        <view class="{{item.text_class}}">{{item.value}}</view>
+      </view>
+    </view>
+
+    <view wx:if="{{item.type=='image'}}" class="frog-type-image {{item.class}}">
+      <view class="frog-title">{{item.title}}</view>
+      <view class="frog-img-box">
+        <image wx:if="{{!imgSrc}}" data-index="{{index}}" bindtap="getChooseImage" class="frog-img"
+          src="/images/add.png"></image>
+        <image wx:if="{{imgSrc}}" class="frog-img-box" src="{{imgSrc}}"></image>
+        <image wx:if="{{imgSrc }}" catchtap="getDel" class="frog-absolute" src="/images/del.png"></image>
+      </view>
+    </view>
+
+  </view>
+</view>
