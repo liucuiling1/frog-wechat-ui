@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "list": "./list/list",
+    "input": "./input/input",
+    "empty": "./empty/empty"
+  }
+}
