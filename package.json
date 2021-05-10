@@ -1,7 +1,7 @@
 {
   "name": "frog-wechat-ui",
   "version": "1.0.0",
-  "description": "",
+  "description": "frog 小程序组件库",
   "main": "frog-wechat-dev/index.js",
   "files": [
     "frog-wechat-dev"
@@ -9,6 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+	"miniprogram": "frog-wechat-dev",
   "repository": {
     "type": "git",
     "multer": "git+https://github.com/liucuiling1/frog-wechat-ui.git"
