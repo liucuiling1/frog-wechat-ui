@@ -8,7 +8,7 @@
   <view class="arrowIcon-right" data-url="{{item.url}}" bindtap="getUrl">
     <view class="arrowIcon-right-text {{item.list_text}}">{{item.text}}</view>
     <image class="arrowIcon-right-icon {{item.list_rightIcon}}"
-      src="{{item.rightIcon?item.rightIcon:'../../images/arrow.png'}}">
+      src="{{item.rightIcon?item.rightIcon:'../images/arrow.png'}}">
     </image>
   </view>
 </view>
